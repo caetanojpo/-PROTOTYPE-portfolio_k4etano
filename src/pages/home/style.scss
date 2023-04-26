@@ -1,0 +1,35 @@
+.avatar {
+  position: relative;
+  z-index: 1;
+  transition: 0.8s;
+}
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.avatar-animation {
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+.avatar-main {
+  z-index: 3;
+}
+
+.avatar:hover .avatar-animation {
+  animation-play-state: running;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
